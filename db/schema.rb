@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_06_232736) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "costume_stores", force: :cascade do |t|
     t.string "name"
@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2021_07_06_232736) do
     t.integer "costume_inventory"
     t.integer "num_of_employees"
     t.boolean "still_in_business"
-    t.string "opening_t"
-    t.string "closing_time"
+    t.datetime "opening_time"
+    t.datetime "closing_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2021_07_06_232736) do
     t.string "theme"
     t.integer "price"
     t.boolean "family_friendly"
-    t.date "opening_date"
-    t.date "closing_date"
+    t.datetime "opening_date"
+    t.datetime "closing_date"
     t.string "description"
   end
 
